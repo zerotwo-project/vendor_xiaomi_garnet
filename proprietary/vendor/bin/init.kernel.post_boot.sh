@@ -84,6 +84,8 @@ function configure_memory_parameters() {
 	if [ -f /sys/class/kgsl/kgsl/max_reclaim_limit ]; then
 		echo 25600 > /sys/class/kgsl/kgsl/max_reclaim_limit
 	fi
+
+        echo 8 > /sys/class/kgsl/kgsl-3d0/default_pwrlevel
 }
 
 # Set Memory parameters.
